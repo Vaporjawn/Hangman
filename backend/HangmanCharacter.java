@@ -1,4 +1,4 @@
-package com.zackrauen.hangman.backend;
+package com.hangman.backend;
 
 public class HangmanCharacter {
 	private Character value;
@@ -6,36 +6,36 @@ public class HangmanCharacter {
 	private Boolean isGuessable = true;
 
 	public HangmanCharacter(char value) { this.setValue(value); }
-	
+
 	public HangmanCharacter(char value, Boolean valid) {
 		this.setValue(value);
 		this.setGuessable(valid);
 	}
-	
+
 	public HangmanCharacter(char value, Boolean beenGuessed, Boolean valid) {
 		this.setValue(value);
 		this.setBeenGuessed(beenGuessed);
 		this.setGuessable(valid);
 	}
-	
+
 	public char displayValue() {
 		if (this.hasBeenGuessed() || !this.isGuessable())
 			return value.charValue();
 		else
 			return '_';
 	}
-	
+
 	public char displayValue(Boolean forceDisplay) {
 		if (forceDisplay)
 			return value.charValue();
 		else
 			return displayValue();
 	}
-	
+
 	public char getValue() { return value.charValue(); }
 
 	public void setValue(char value) { this.value = new Character(value); }
-	
+
 	public void setValue(Character value) { this.value = value; }
 
 	public Boolean hasBeenGuessed() { return hasBeenGuessed; }
@@ -52,7 +52,7 @@ public class HangmanCharacter {
 		else
 			return false;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 	    if (obj == null)

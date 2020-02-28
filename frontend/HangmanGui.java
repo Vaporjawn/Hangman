@@ -1,4 +1,4 @@
-package com.zackrauen.hangman.frontend;
+package com.hangman.frontend;
 
 import gnu.io.CommPortIdentifier;
 import gnu.io.NoSuchPortException;

@@ -1,4 +1,4 @@
-package com.zackrauen.hangman.backend.listeners;
+package com.hangman.backend.listeners;
 
 import com.zackrauen.hangman.backend.events.HangmanEvent;
 
